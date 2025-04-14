@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Your Platform Name</div>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/courses">Courses</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <!-- Add login/logout logic here -->
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Our Blog</h1>
+            <p>Stay up-to-date with the latest industry insights, tips, and tutorials.</p>
+        </section>
+
+        <section class="blog-posts">
+            {% for post in posts %}
+            <article class="blog-post">
+                <h2><a href="{{ url_for('blog.post', post_id=post.id) }}">{{ post.title }}</a></h2>
+                <p class="author">By {{ post.author }} | {{ post.publication_date.strftime('%Y-%m-%d') }}</p>
+                <p class="excerpt">{{ post.content[:200] }}...</p>
+                <a href="{{ url_for('blog.post', post_id=post.id) }}" class="read-more">Read More</a>
+            </article>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Your Platform Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>

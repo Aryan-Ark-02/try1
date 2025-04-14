@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enrolled Course</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            width: 25%;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .sidebar h3 {
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar li {
+            padding: 10px;
+            cursor: pointer;
+        }
+        .sidebar li.active {
+            background-color: #e0e0e0;
+        }
+        .sidebar ul ul {
+            display: none;
+            margin-left: 20px;
+        }
+        .sidebar li.expanded > ul {
+            display: block;
+        }
+        .main-content {
+            width: 75%;
+            padding: 20px;
+        }
+        .lesson-title {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .video-player {
+            width: 100%;
+            height: 400px;
+            background-color: #000;
+            margin-bottom: 20px;
+        }
+        .lesson-description {
+            margin-bottom: 20px;
+        }
+        .resources {
+            margin-bottom: 20px;
+        }
+        .resources ul {
+            list-style: none;
+            padding: 0;
+        }
+        .resources li {
+            padding: 5px 0;
+        }
+        .nav-buttons {
+            text-align: right;
+        }
+        .nav-buttons a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+            }
+            .main-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Course Title</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <h3>Syllabus</h3>
+            <ul>
+                <li class="module">
+                    Module 1
+                    <ul>
+                        <li class="lesson active">Lesson 1.1</li>
+                        <li class="lesson">Lesson 1.2</li>
+                    </ul>
+                </li>
+                <li class="module">
+                    Module 2
+                    <ul>
+                        <li class="lesson">Lesson 2.1</li>
+                        <li class="lesson">Lesson 2.2</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2 class="lesson-title">Lesson 1.1 Title</h2>
+            <div class="video-player">
+                <!-- Placeholder for video player -->
+            </div>
+            <div class="lesson-description">
+                <p>Lesson description and objectives.</p>
+            </div>
+            <div class="resources">
+                <h3>Resources</h3>
+                <ul>
+                    <li><a href="#">Downloadable File 1</a></li>
+                    <li><a href="#">Supplementary Reading</a></li>
+                </ul>
+            </div>
+            <div class="nav-buttons">
+                <a href="#">Previous Lesson</a>
+                <a href="#">Next Lesson</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const modules = document.querySelectorAll('.module');
+        modules.forEach(module => {
+            module.addEventListener('click', () => {
+                module.classList.toggle('expanded');
+            });
+        });
+    </script>
+</body>
+</html>

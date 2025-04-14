@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Our Courses</title>
+    <style>
+        /* Basic CSS for layout and responsiveness */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+        .hero {
+            background-color: #f4f4f4;
+            padding: 2rem;
+            text-align: center;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+        }
+        .course-item {
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+        }
+        .course-item img {
+            max-width: 100%;
+            height: auto;
+        }
+        .course-item button {
+            background-color: #007bff;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#">Logo</a>
+        <a href="#" style="float: right;">Logout</a>
+    </div>
+
+    <section class="hero">
+        <h1>Explore Our Courses</h1>
+        <p>Choose from a variety of courses designed to help you achieve your personal and professional goals. Our expert instructors and comprehensive curriculum ensure an engaging and effective learning experience.</p>
+    </section>
+
+    <section class="course-grid">
+        <!-- Example Course Item (repeat for each course) -->
+        <div class="course-item">
+            <img src="placeholder-image.jpg" alt="Course Thumbnail">
+            <h2>Course Title 1</h2>
+            <p>Instructor: John Doe</p>
+            <p>Rating: ★★★★☆</p>
+            <p>Price: $99</p>
+            <button>Enroll</button>
+        </div>
+        <div class="course-item">
+            <img src="placeholder-image.jpg" alt="Course Thumbnail">
+            <h2>Course Title 2</h2>
+            <p>Instructor: Jane Smith</p>
+            <p>Rating: ★★★★★</p>
+            <p>Price: $149</p>
+            <button>Enroll</button>
+        </div>
+        <!-- More course items here -->
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2023 Educational Platform. All rights reserved.</p>
+    </footer>
+</body>
+</html>
